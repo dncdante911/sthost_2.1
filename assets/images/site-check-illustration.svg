@@ -1,0 +1,68 @@
+<svg width="500" height="380" viewBox="0 0 500 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="250" cy="190" r="180" fill="url(#grad)" opacity="0.15"/>
+  
+  <!-- Browser window -->
+  <rect x="100" y="80" width="300" height="200" rx="12" fill="#fff" stroke="#D1D5DB" stroke-width="2"/>
+  <rect x="100" y="80" width="300" height="40" rx="12" fill="#F3F4F6"/>
+  <circle cx="120" cy="100" r="5" fill="#EF4444"/>
+  <circle cx="140" cy="100" r="5" fill="#F59E0B"/>
+  <circle cx="160" cy="100" r="5" fill="#10B981"/>
+  
+  <!-- URL bar -->
+  <rect x="180" y="92" width="180" height="16" rx="8" fill="#E5E7EB"/>
+  
+  <!-- Status Check Lines -->
+  <rect class="line" x="130" y="150" width="240" height="14" rx="7" fill="#E5E7EB"/>
+  <rect class="line" x="130" y="180" width="200" height="14" rx="7" fill="#E5E7EB"/>
+  <rect class="line" x="130" y="210" width="150" height="14" rx="7" fill="#E5E7EB"/>
+  
+  <!-- Scan light -->
+  <rect class="scan" x="100" y="80" width="300" height="200" rx="12" fill="url(#scanGrad)" opacity="0.25"/>
+
+  <!-- Magnifying Glass -->
+  <g class="magnifier">
+    <circle cx="370" cy="230" r="28" stroke="#4F46E5" stroke-width="4" fill="#fff"/>
+    <line x1="388" y1="248" x2="405" y2="265" stroke="#4F46E5" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Animations -->
+  <style>
+    .scan {
+      animation: scanMove 2s infinite linear;
+    }
+    @keyframes scanMove {
+      0% { transform: translateY(0); opacity: 0.15; }
+      50% { transform: translateY(160px); opacity: 0.3; }
+      100% { transform: translateY(0); opacity: 0.15; }
+    }
+    .magnifier {
+      animation: magnifierMove 3s infinite ease-in-out;
+      transform-origin: 370px 230px;
+    }
+    @keyframes magnifierMove {
+      0% { transform: translate(0,0) rotate(0deg); }
+      50% { transform: translate(-15px,-10px) rotate(-5deg); }
+      100% { transform: translate(0,0) rotate(0deg); }
+    }
+    .line {
+      animation: linePulse 1.5s infinite ease-in-out;
+    }
+    @keyframes linePulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+  </style>
+  
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="grad" x1="70" y1="50" x2="430" y2="350" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4A3AFF"/>
+      <stop offset="1" stop-color="#6B4EFF"/>
+    </linearGradient>
+    <linearGradient id="scanGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#4F46E5" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>

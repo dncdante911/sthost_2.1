@@ -1,0 +1,52 @@
+.legal-hero {
+    background: linear-gradient(120deg, #1a73e8, #00bfa5);
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.accordion {
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.accordion-item {
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    background: #f1f3f4;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.3s;
+}
+
+.accordion-header:hover {
+    background: #e0f2f1;
+}
+
+.accordion-header.active {
+    background: #1a73e8;
+    color: #fff;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 20px;
+    background: #fff;
+}
+
+.accordion-content p, .accordion-content ul {
+    margin: 15px 0;
+}

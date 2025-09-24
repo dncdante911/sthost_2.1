@@ -1,0 +1,874 @@
+/* ==========================================================================
+   StormHosting UA - Domain Pages Styles - ИСПРАВЛЕННАЯ ВЕРСИЯ
+   ========================================================================== */
+
+:root {
+    --primary-color: #667eea;
+    --primary-dark: #5a6fd8;
+    --primary-light: #7c8cff;
+    --secondary-color: #764ba2;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+    --info-color: #06b6d4;
+    --dark-color: #1f2937;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+    --white: #ffffff;
+    --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --border-radius-lg: 12px;
+    --border-radius-xl: 16px;
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* ==========================================================================
+   Domain Hero Section
+   ========================================================================== */
+
+.domain-hero,
+.whois-hero,
+.dns-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0 80px;
+}
+
+.domain-hero::before,
+.whois-hero::before,
+.dns-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZmZmZjEwIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=');
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.domain-hero .container,
+.whois-hero .container,
+.dns-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* ==========================================================================
+   ВАЖНО: Domain Illustration - ЭТО ТО, ЧТО ИСПРАВЛЯЕТ ПРОБЛЕМУ!
+   ========================================================================== */
+
+.domain-illustration {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.domain-bubble {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50px;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: white;
+    animation: float 3s ease-in-out infinite;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    min-width: 120px;
+    justify-content: center;
+}
+
+.domain-bubble:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.domain-bubble.central {
+    background: rgba(255, 255, 255, 0.2);
+    font-size: 1.1rem;
+    z-index: 2;
+    padding: 20px 30px;
+    min-width: 160px;
+}
+
+.domain-bubble i {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Позиционирование пузырьков */
+.domain-bubble:nth-child(1) { 
+    top: 20%; 
+    left: 10%; 
+    animation-delay: 0s; 
+}
+
+.domain-bubble:nth-child(2) { 
+    top: 30%; 
+    right: 15%; 
+    animation-delay: 0.5s; 
+}
+
+.domain-bubble:nth-child(3) { 
+    bottom: 30%; 
+    left: 20%; 
+    animation-delay: 1s; 
+}
+
+.domain-bubble:nth-child(4) { 
+    bottom: 20%; 
+    right: 10%; 
+    animation-delay: 1.5s; 
+}
+
+.domain-bubble:nth-child(5) {
+    /* Central bubble - позиционируется автоматически через flexbox */
+    position: relative !important;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg); 
+    }
+    50% { 
+        transform: translateY(-15px) rotate(2deg); 
+    }
+}
+
+/* ==========================================================================
+   Domain Features
+   ========================================================================== */
+
+.domain-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.feature-item i {
+    color: #4ade80;
+    font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   Domain Statistics
+   ========================================================================== */
+
+.domain-stats {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background: var(--gray-50);
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   Service Cards
+   ========================================================================== */
+
+.service-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid var(--gray-200);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-color);
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: white;
+    font-size: 1.8rem;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.service-card h4 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--gray-800);
+    text-align: center;
+}
+
+.service-card p {
+    color: var(--gray-600);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.service-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: var(--gray-700);
+}
+
+.service-features .bi-check {
+    color: var(--success-color);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* ==========================================================================
+   Domain Zone Cards
+   ========================================================================== */
+
+.domain-zone-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+}
+
+.domain-zone-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-color);
+}
+
+.domain-zone-card.compact {
+    padding: 1.2rem;
+}
+
+.zone-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.zone-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.zone-price {
+    margin-bottom: 1.5rem;
+}
+
+.zone-price .price {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--gray-800);
+}
+
+.zone-price .period {
+    font-size: 0.9rem;
+    color: var(--gray-500);
+    margin-left: 4px;
+}
+
+.zone-check-btn {
+    margin-top: auto;
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 10px 20px;
+}
+
+/* ==========================================================================
+   Recent Activity Section
+   ========================================================================== */
+
+.recent-activity {
+    background: var(--gray-50);
+}
+
+.recent-domains {
+    max-width: 500px;
+}
+
+.recent-domain-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    animation: fadeInLeft 0.6s ease forwards;
+    opacity: 0;
+    transform: translateX(-20px);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--gray-200);
+}
+
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.recent-domain-item i {
+    color: var(--success-color);
+    font-size: 1.1rem;
+}
+
+.recent-domain-item span {
+    font-weight: 500;
+    color: var(--gray-800);
+}
+
+.recent-domain-item small {
+    margin-left: auto;
+    color: var(--gray-500);
+    font-size: 0.8rem;
+}
+
+/* ==========================================================================
+   Info Cards
+   ========================================================================== */
+
+.info-cards {
+    max-width: 500px;
+    margin-left: auto;
+}
+
+.info-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 1rem;
+    border: 1px solid var(--gray-200);
+    transition: all var(--transition-normal);
+}
+
+.info-card:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.info-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.info-content h5 {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--gray-800);
+    font-size: 1.1rem;
+}
+
+.info-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--gray-600);
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   CTA Section
+   ========================================================================== */
+
+.cta-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(255,255,255,0.1) 0%, transparent 50%);
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    padding: 3rem 2rem;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.cta-content .lead {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+/* ==========================================================================
+   Section Titles
+   ========================================================================== */
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--gray-800);
+    line-height: 1.2;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--gray-600);
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   Search Forms
+   ========================================================================== */
+
+.domain-search-form,
+.whois-search-form,
+.dns-search-form {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.domain-input-group .input-group-text {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    border-radius: 8px 0 0 8px;
+}
+
+.domain-input-group .form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    font-weight: 500;
+}
+
+.domain-input-group .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.domain-input-group .form-control:focus {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+    color: white;
+}
+
+.domain-input-group .form-select {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    font-weight: 500;
+}
+
+.domain-input-group .form-select option {
+    background: var(--dark-color);
+    color: white;
+}
+
+/* ==========================================================================
+   Quick Type Buttons
+   ========================================================================== */
+
+.quick-types {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.quick-type-btn {
+    margin: 0.25rem;
+    border-radius: 20px;
+    transition: all var(--transition-normal);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.quick-type-btn:hover,
+.quick-type-btn.active {
+    background: white;
+    border-color: white;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Feature Items
+   ========================================================================== */
+
+.feature-item {
+    padding: 2rem 1.5rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-normal);
+    height: 100%;
+    border: 1px solid var(--gray-200);
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: white;
+    font-size: 2rem;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+/* ==========================================================================
+   Search Results
+   ========================================================================== */
+
+.domain-result-card,
+.whois-result-card,
+.dns-result-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid var(--gray-200);
+    animation: slideInUp 0.5s ease;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+    .domain-illustration {
+        height: 350px;
+    }
+    
+    .domain-bubble {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .domain-bubble.central {
+        padding: 16px 24px;
+    }
+}
+
+@media (max-width: 992px) {
+    .domain-hero {
+        padding: 80px 0 60px;
+    }
+    
+    .domain-illustration {
+        height: 300px;
+        margin-top: 40px;
+    }
+    
+    .domain-bubble {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+        min-width: 100px;
+    }
+    
+    .domain-bubble.central {
+        padding: 14px 20px;
+        min-width: 140px;
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .domain-hero {
+        padding: 60px 0 40px;
+    }
+    
+    .domain-illustration {
+        height: 250px;
+        margin-top: 30px;
+    }
+    
+    .domain-bubble {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        min-width: 80px;
+        gap: 6px;
+    }
+    
+    .domain-bubble.central {
+        padding: 12px 16px;
+        min-width: 120px;
+        font-size: 0.9rem;
+    }
+    
+    .domain-bubble i {
+        font-size: 1rem;
+    }
+    
+    .domain-features {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .service-card,
+    .info-card {
+        padding: 1.5rem;
+    }
+    
+    .domain-zone-card {
+        padding: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .cta-content {
+        padding: 2rem 1rem;
+    }
+    
+    .cta-content h2 {
+        font-size: 1.75rem;
+    }
+    
+    .cta-content .lead {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .domain-bubble:nth-child(1) { 
+        top: 15%; 
+        left: 5%; 
+    }
+    
+    .domain-bubble:nth-child(2) { 
+        top: 25%; 
+        right: 5%; 
+    }
+    
+    .domain-bubble:nth-child(3) { 
+        bottom: 25%; 
+        left: 5%; 
+    }
+    
+    .domain-bubble:nth-child(4) { 
+        bottom: 15%; 
+        right: 5%; 
+    }
+    
+    .recent-domain-item {
+        padding: 10px 12px;
+    }
+    
+    .info-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+/* ==========================================================================
+   Animations & Interactions
+   ========================================================================== */
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Loading states */
+.loading {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Button animations */
+.btn {
+    transition: all var(--transition-normal);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    border: none;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+/* ==========================================================================
+   Print Styles
+   ========================================================================== */
+
+@media print {
+    .domain-hero,
+    .domain-stats,
+    .cta-section {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .domain-bubble,
+    .service-icon,
+    .info-icon {
+        background: #f0f0f0 !important;
+        color: black !important;
+    }
+    
+    .btn {
+        border: 1px solid black;
+        background: none !important;
+        color: black !important;
+    }
+}

@@ -1,0 +1,59 @@
+<svg width="500" height="380" viewBox="0 0 500 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="250" cy="190" r="180" fill="url(#grad)" opacity="0.12"/>
+
+  <!-- Map -->
+  <rect x="100" y="80" width="300" height="200" rx="12" fill="#fff" stroke="#D1D5DB" stroke-width="2"/>
+  
+  <!-- Simple world map path -->
+  <path class="map" d="M120 150 Q150 130 180 140 T220 130 T270 140 T320 130 T350 140 T380 135"
+        stroke="#4F46E5" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Ping waves -->
+  <circle class="ping" cx="250" cy="180" r="5" fill="#10B981"/>
+  <circle class="ping-wave" cx="250" cy="180" r="5" stroke="#10B981" stroke-width="2" fill="none" />
+
+  <!-- Location pin -->
+  <g class="pin">
+    <path d="M250 160 C235 160 225 175 225 190 C225 210 250 240 250 240 C250 240 275 210 275 190 C275 175 265 160 250 160Z" fill="#F43F5E"/>
+    <circle cx="250" cy="190" r="8" fill="white"/>
+  </g>
+
+  <!-- Animations -->
+  <style>
+    .map {
+      stroke-dasharray: 400;
+      stroke-dashoffset: 400;
+      animation: drawMap 2s ease forwards;
+    }
+    @keyframes drawMap {
+      to { stroke-dashoffset: 0; }
+    }
+
+    .ping-wave {
+      animation: pingWave 2s infinite ease-out;
+      transform-origin: 250px 180px;
+    }
+    @keyframes pingWave {
+      0% { r: 5; opacity: 0.8; }
+      100% { r: 40; opacity: 0; }
+    }
+
+    .pin {
+      animation: pinBounce 1.5s infinite ease-in-out;
+      transform-origin: 250px 190px;
+    }
+    @keyframes pinBounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+  </style>
+
+  <!-- Gradient defs -->
+  <defs>
+    <linearGradient id="grad" x1="70" y1="50" x2="430" y2="350" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4A3AFF"/>
+      <stop offset="1" stop-color="#6B4EFF"/>
+    </linearGradient>
+  </defs>
+</svg>

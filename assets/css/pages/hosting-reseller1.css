@@ -1,0 +1,692 @@
+/* hosting-reseller.css - Стилі для сторінки реселерського хостингу */
+
+/* Hero Section */
+.reseller-hero {
+    background: linear-gradient(135deg, #9061c9 0%, #4e3ea8 100%);
+    padding: 100px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.reseller-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
+}
+
+.hero-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 8px 20px;
+    border-radius: 30px;
+    color: white;
+    font-weight: 600;
+}
+
+.hero-badge i {
+    margin-right: 8px;
+    color: #ffd700;
+}
+
+.hero-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.feature-item i {
+    color: #4ade80;
+    font-size: 1.2rem;
+}
+
+/* Reseller Illustration */
+.reseller-illustration {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.partner-network {
+    position: relative;
+    width: 350px;
+    height: 350px;
+}
+
+.central-node {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.central-node i {
+    font-size: 3rem;
+    color: white;
+}
+
+.partner-node {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: orbit 10s linear infinite;
+    animation-delay: calc(var(--delay) * 2.5s);
+}
+
+.partner-node i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.partner-node:nth-child(2) {
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.partner-node:nth-child(3) {
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+}
+
+.partner-node:nth-child(4) {
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.partner-node:nth-child(5) {
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+@keyframes orbit {
+    from {
+        transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    }
+}
+
+.connection-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.connection-lines .line {
+    position: absolute;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform-origin: center;
+}
+
+.line-1 {
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+
+.line-2 {
+    width: 100px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
+}
+
+.line-3 {
+    height: 100px;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+}
+
+.line-4 {
+    width: 100px;
+    height: 2px;
+    top: 50%;
+    right: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.3), transparent);
+}
+
+/* Benefits Section */
+.benefit-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.benefit-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.benefit-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.benefit-list li {
+    padding: 5px 0;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.benefit-list li::before {
+    content: '✓';
+    color: #4ade80;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* Reseller Plans */
+.plan-card {
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 15px;
+    padding: 30px;
+    position: relative;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.plan-card:hover {
+    border-color: #f093fb;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(240, 147, 251, 0.2);
+}
+
+.plan-card.popular {
+    border-color: #f093fb;
+    background: linear-gradient(to bottom, rgba(240, 147, 251, 0.05), transparent);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.plan-header h4 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.plan-price {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.plan-price .amount {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #f093fb;
+}
+
+.plan-price .currency {
+    font-size: 1.5rem;
+    color: #6c757d;
+}
+
+.plan-price .period {
+    color: #6c757d;
+    font-size: 1rem;
+}
+
+.plan-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.plan-features li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f8f9fa;
+}
+
+.plan-features li:last-child {
+    border-bottom: none;
+}
+
+.plan-features i {
+    margin-right: 10px;
+}
+
+/* Profit Calculator */
+.calculator-container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.calculator-panel {
+    padding: 40px;
+}
+
+.calculator-field {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.value-display {
+    background: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    color: #f093fb;
+    min-width: 80px;
+    text-align: center;
+}
+
+.form-range {
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 10px;
+}
+
+.form-range::-webkit-slider-thumb {
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    border: 3px solid white;
+    box-shadow: 0 2px 10px rgba(240, 147, 251, 0.5);
+}
+
+.form-range::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    border: 3px solid white;
+    box-shadow: 0 2px 10px rgba(240, 147, 251, 0.5);
+}
+
+/* Profit Summary */
+.profit-item:last-child {
+    border-bottom: none;
+}
+
+.profit-total {
+    padding-top: 20px;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.monthly-profit,
+.yearly-profit {
+    margin-bottom: 15px;
+}
+
+.monthly-profit .label,
+.yearly-profit .label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    opacity: 0.9;
+}
+
+.monthly-profit .amount,
+.yearly-profit .amount {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.yearly-profit .amount {
+    font-size: 1.5rem;
+}
+
+.profit-chart {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* How It Works */
+.step-card {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto 20px;
+}
+
+.step-card h5 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.step-card p {
+    color: #6c757d;
+    margin: 0;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Partner Form Modal */
+.modal-content {
+    border: none;
+    border-radius: 15px;
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    border-radius: 15px 15px 0 0;
+    border: none;
+}
+
+.modal-header .btn-close {
+    filter: brightness(0) invert(1);
+}
+
+/* FAQ Accordion */
+.accordion-item {
+    border: none;
+    margin-bottom: 15px;
+    border-radius: 10px !important;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.accordion-button {
+    background: white;
+    color: #333;
+    font-weight: 600;
+    padding: 20px;
+    border: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button::after {
+    filter: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0) invert(1);
+}
+
+.accordion-body {
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .reseller-illustration {
+        height: 250px;
+        margin-top: 30px;
+    }
+    
+    .partner-network {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .central-node {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .central-node i {
+        font-size: 2rem;
+    }
+    
+    .partner-node {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .profit-summary {
+        position: relative;
+        top: 0;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .reseller-hero {
+        padding: 80px 0 60px;
+    }
+    
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .hero-features {
+        flex-direction: column;
+    }
+    
+    .calculator-panel {
+        padding: 20px;
+    }
+    
+    .plan-card {
+        margin-bottom: 20px;
+    }
+    
+    .step-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.benefit-card,
+.plan-card,
+.step-card {
+    animation: slideIn 0.6s ease forwards;
+    opacity: 0;
+}
+
+.benefit-card:nth-child(1) { animation-delay: 0.1s; }
+.benefit-card:nth-child(2) { animation-delay: 0.2s; }
+.benefit-card:nth-child(3) { animation-delay: 0.3s; }
+.benefit-card:nth-child(4) { animation-delay: 0.4s; }
+.benefit-card:nth-child(5) { animation-delay: 0.5s; }
+.benefit-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Loading State */
+.loading {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f093fb;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Notification Toast */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    min-width: 300px;
+    animation: slideInRight 0.3s ease;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}summary {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    position: sticky;
+    top: 100px;
+}
+
+.profit-details {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.profit-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}

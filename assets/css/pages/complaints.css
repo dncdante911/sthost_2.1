@@ -1,0 +1,54 @@
+.complaints-hero {
+    background: linear-gradient(135deg, #4a6cf7, #00c2a8);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+.complaints-hero h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.complaints-hero p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+.complaints-form {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-top: 30px;
+    max-width: 700px;
+}
+.complaints-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 500;
+}
+.complaints-form input,
+.complaints-form select,
+.complaints-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+}
+.complaints-form button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+}
+.form-status {
+    margin-top: 15px;
+    font-size: 0.95rem;
+}
+.form-status.success {
+    color: green;
+}
+.form-status.error {
+    color: red;
+}

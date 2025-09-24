@@ -1,0 +1,146 @@
+.about-hero {
+    background: linear-gradient(135deg, #1a73e8, #00bfa5);
+    color: #fff;
+    padding: 50px 20px;
+    border-radius: 0 0 30px 30px;
+}
+
+.hero-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.hero-text {
+    flex: 1 1 65%;
+    max-width: 650px;
+}
+
+.hero-svg {
+    flex: 1 1 35%;
+    display: flex;
+    justify-content: center;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.about-subtitle {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.about-subtitle .highlight {
+    font-weight: 700;
+    color: #ffea00;
+}
+
+.about-description,
+.about-datacenters {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .hero-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-svg {
+        order: -1;
+    }
+}
+
+
+.about-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 50px auto;
+}
+
+.stat-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card .icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.about-values {
+    margin: 50px auto;
+    text-align: center;
+}
+
+.value-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.value-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 260px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.value-card .icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.about-why {
+    margin: 50px auto;
+}
+
+.why-list {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.why-list li {
+    background: #f8f9fa;
+    padding: 12px 18px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

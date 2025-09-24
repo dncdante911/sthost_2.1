@@ -1,0 +1,956 @@
+/* =================================
+   CSS для страницы Гарантия качества
+   /assets/css/pages/info-quality.css
+   ================================= */
+
+/* Hero Section */
+.quality-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 120px 0 80px;
+    min-height: 70vh;
+}
+
+.quality-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
+}
+
+.quality-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    padding: 8px 20px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    animation: float 3s ease-in-out infinite;
+}
+
+.quality-badge i {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Guarantee Highlights */
+.guarantee-highlights {
+    margin-top: 40px;
+}
+
+.guarantee-highlights .guarantee-item {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.guarantee-highlights .guarantee-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(10px);
+}
+
+.guarantee-highlights .guarantee-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+.guarantee-info h5 {
+    color: white;
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.guarantee-info p {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Hero Visual Dashboard */
+.hero-visual {
+    position: relative;
+    z-index: 2;
+}
+
+.quality-dashboard {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 25px;
+    animation: float 4s ease-in-out infinite;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dashboard-header h6 {
+    color: white;
+    margin: 0;
+    font-weight: 600;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    color: #4ade80;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status-indicator.online .status-dot {
+    width: 8px;
+    height: 8px;
+    background: #4ade80;
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: pulse 2s infinite;
+}
+
+.metrics-grid {
+    display: grid;
+    gap: 15px;
+}
+
+.metric-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.metric-value {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.metric-label {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.metric-progress {
+    margin-top: 8px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #4ade80, #22c55e);
+    border-radius: 2px;
+    animation: progressLoad 2s ease-out;
+}
+
+.metric-chart {
+    margin-top: 8px;
+}
+
+.chart-bars {
+    display: flex;
+    align-items: end;
+    gap: 2px;
+    height: 20px;
+}
+
+.bar {
+    background: linear-gradient(to top, #667eea, #764ba2);
+    width: 3px;
+    min-height: 4px;
+    border-radius: 1px;
+    animation: barGrow 1.5s ease-out;
+}
+
+.metric-status {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+}
+
+.metric-status.success {
+    color: #4ade80;
+}
+
+.metric-status i {
+    margin-right: 5px;
+}
+
+/* SLA Section */
+.sla-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.sla-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.sla-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.sla-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.sla-card.featured {
+    border-color: #667eea;
+    transform: scale(1.02);
+}
+
+.sla-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.sla-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sla-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    color: white;
+    font-size: 24px;
+}
+
+.sla-header h4 {
+    margin: 0;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.sla-percentage {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #667eea;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.sla-description {
+    color: #6c757d;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.sla-details {
+    border-top: 1px solid #e9ecef;
+    padding-top: 20px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.detail-value {
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Response Times */
+.response-times {
+    display: grid;
+    gap: 15px;
+}
+
+.response-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 4px solid;
+}
+
+.response-item.urgent {
+    background: rgba(239, 68, 68, 0.05);
+    border-left-color: #ef4444;
+}
+
+.response-item.high {
+    background: rgba(249, 115, 22, 0.05);
+    border-left-color: #f97316;
+}
+
+.response-item.normal {
+    background: rgba(34, 197, 94, 0.05);
+    border-left-color: #22c55e;
+}
+
+.response-item.low {
+    background: rgba(59, 130, 246, 0.05);
+    border-left-color: #3b82f6;
+}
+
+.response-priority {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.response-time {
+    font-weight: 700;
+    color: #667eea;
+}
+
+/* Speed Metrics */
+.speed-metrics {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.speed-item {
+    text-align: center;
+}
+
+.speed-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #667eea;
+    display: block;
+}
+
+.speed-label {
+    color: #6c757d;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.speed-description {
+    color: #6c757d;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Monitoring Section */
+.monitoring-section {
+    padding: 80px 0;
+}
+
+.monitoring-features {
+    margin-top: 30px;
+}
+
+.monitoring-feature {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    color: white;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.feature-content h5 {
+    margin: 0 0 8px 0;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.feature-content p {
+    margin: 0;
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+/* Monitoring Visual */
+.monitoring-visual {
+    position: relative;
+}
+
+.monitoring-dashboard {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+}
+
+.dashboard-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.dashboard-title h6 {
+    margin: 0;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.live-indicator {
+    background: #ef4444;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    animation: pulse 1.5s infinite;
+}
+
+.monitoring-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.monitor-item {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid #e9ecef;
+}
+
+.monitor-label {
+    font-size: 12px;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.monitor-status {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.monitor-status.online {
+    color: #22c55e;
+}
+
+.monitor-status .status-dot {
+    width: 6px;
+    height: 6px;
+    background: #22c55e;
+    border-radius: 50%;
+    margin-right: 6px;
+    animation: pulse 2s infinite;
+}
+
+.monitor-metrics {
+    display: flex;
+    gap: 10px;
+    font-size: 10px;
+    color: #6c757d;
+}
+
+/* Recent Events */
+.recent-events {
+    border-top: 1px solid #e9ecef;
+    padding-top: 15px;
+}
+
+.events-title {
+    font-size: 12px;
+    color: #2c3e50;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.event-item {
+    display: flex;
+    align-items: center;
+    padding: 6px 0;
+    font-size: 11px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.event-item:last-child {
+    border-bottom: none;
+}
+
+.event-time {
+    color: #6c757d;
+    width: 40px;
+    flex-shrink: 0;
+}
+
+.event-text {
+    color: #2c3e50;
+    flex: 1;
+    margin: 0 10px;
+}
+
+.event-status {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    font-weight: 600;
+}
+
+.event-status.success {
+    background: #22c55e;
+    color: white;
+}
+
+.event-status.info {
+    background: #3b82f6;
+    color: white;
+}
+
+/* Security Section */
+.security-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.security-card {
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.security-card:hover {
+    border-color: #667eea;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.1);
+}
+
+.security-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 32px;
+}
+
+.security-card h5 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.security-card p {
+    color: #6c757d;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.security-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.feature-badge {
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Compensation Section */
+.compensation-section {
+    padding: 80px 0;
+}
+
+.compensation-table {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.compensation-header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.compensation-header h6 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.compensation-rows {
+    padding: 0;
+}
+
+.compensation-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.compensation-row:last-child {
+    border-bottom: none;
+}
+
+.downtime-range {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.compensation-amount {
+    color: #667eea;
+    font-weight: 600;
+}
+
+/* Calculator Widget */
+.calculator-widget {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.calculator-header h6 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.calculator-form {
+    padding: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+}
+
+.input-group input {
+    border: none;
+    padding: 12px 15px;
+    flex: 1;
+    outline: none;
+    font-size: 16px;
+}
+
+.input-group:focus-within {
+    border-color: #667eea;
+}
+
+.input-unit {
+    background: #f8f9fa;
+    padding: 12px 15px;
+    color: #6c757d;
+    font-weight: 500;
+    border-left: 1px solid #e9ecef;
+}
+
+.calculation-result {
+    background: rgba(102, 126, 234, 0.05);
+    border: 2px solid rgba(102, 126, 234, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.result-label {
+    color: #6c757d;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.result-amount {
+    color: #667eea;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Certificates Section */
+.certificates-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.certificate-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.certificate-card:hover {
+    border-color: #667eea;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.15);
+}
+
+.certificate-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 32px;
+}
+
+.certificate-card h5 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.certificate-card p {
+    color: #6c757d;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.certificate-status {
+    background: #22c55e;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* Contact CTA Section */
+.contact-cta {
+    padding: 60px 0;
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes progressLoad {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 99.97%;
+    }
+}
+
+@keyframes barGrow {
+    0% {
+        height: 4px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .quality-hero {
+        padding: 80px 0 60px;
+        min-height: 50vh;
+    }
+    
+    .guarantee-highlights .guarantee-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .guarantee-highlights .guarantee-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .sla-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .monitoring-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .speed-metrics {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .quality-hero,
+    .sla-section,
+    .monitoring-section,
+    .security-section,
+    .compensation-section,
+    .certificates-section {
+        padding: 60px 0;
+    }
+    
+    .sla-card,
+    .monitoring-dashboard,
+    .calculator-widget {
+        padding: 20px;
+    }
+    
+    .security-icon,
+    .certificate-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,14 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle class="bg" cx="40" cy="40" r="38" fill="#EEF2FF" stroke="#4F46E5" stroke-width="2"/>
+  <path class="globe" d="M40 10C23 10 10 23 10 40C10 57 23 70 40 70C57 70 70 57 70 40C70 23 57 10 40 10ZM40 10C40 30 40 50 40 70M10 40H70" stroke="#4F46E5" stroke-width="2"/>
+  <style>
+    .globe {
+      stroke-dasharray: 250;
+      stroke-dashoffset: 250;
+      animation: drawGlobe 2s infinite linear;
+    }
+    @keyframes drawGlobe {
+      to { stroke-dashoffset: 0; }
+    }
+  </style>
+</svg>

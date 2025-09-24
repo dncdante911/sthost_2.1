@@ -1,0 +1,13 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle class="bg" cx="40" cy="40" r="38" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <polygon class="bolt" points="45,15 25,45 40,45 35,65 55,35 40,35" fill="#F59E0B"/>
+  <style>
+    .bolt {
+      animation: pulseBolt 1.2s infinite ease-in-out;
+    }
+    @keyframes pulseBolt {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+    }
+  </style>
+</svg>

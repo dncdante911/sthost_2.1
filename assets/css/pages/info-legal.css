@@ -1,0 +1,871 @@
+/* =================================
+   CSS для страницы юридической информации
+   /assets/css/pages/info-legal.css
+   ================================= */
+
+/* Hero Section */
+.legal-hero {
+    background: linear-gradient(135deg, #1e40af 0%, #3730a3 50%, #581c87 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 120px 0 80px;
+    min-height: 75vh;
+}
+
+.legal-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="legal" width="25" height="25" patternUnits="userSpaceOnUse"><rect width="25" height="25" fill="none"/><path d="M12.5 5L20 12.5L12.5 20L5 12.5z" fill="rgba(255,255,255,0.03)"/><circle cx="12.5" cy="12.5" r="1.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23legal)"/></svg>');
+    opacity: 0.4;
+}
+
+.legal-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    padding: 10px 24px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    animation: float 3s ease-in-out infinite;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.legal-badge i {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Company Status */
+.company-status {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.status-item {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.status-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.status-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 22px;
+    color: white;
+}
+
+.status-icon.verified {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.status-icon.licensed {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.status-icon.insured {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.status-info h6 {
+    color: white;
+    margin: 0 0 5px 0;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.status-info p {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    font-size: 12px;
+}
+
+/* Legal Dashboard */
+.hero-visual {
+    position: relative;
+    z-index: 2;
+}
+
+.legal-dashboard {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    padding: 30px;
+    animation: float 4s ease-in-out infinite;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dashboard-header h6 {
+    color: white;
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.verification-badge {
+    display: flex;
+    align-items: center;
+    background: rgba(16, 185, 129, 0.2);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 20px;
+    padding: 6px 16px;
+    color: #10b981;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.verify-dot {
+    width: 8px;
+    height: 8px;
+    background: #10b981;
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: pulse 2s infinite;
+}
+
+.company-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.company-logo {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    color: white;
+    font-size: 24px;
+}
+
+.company-details h5 {
+    color: white;
+    margin: 0 0 8px 0;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.company-details p {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 2px 0;
+    font-size: 13px;
+}
+
+.legal-stats {
+    margin-top: 20px;
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.stat-item {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 16px 12px;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+
+.stat-number {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Company Details Section */
+.company-details-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.company-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+}
+
+.company-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.company-header h3 {
+    color: #1e293b;
+    margin: 0;
+    font-weight: 600;
+}
+
+.verification-status {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.verification-status.verified {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.verification-status i {
+    margin-right: 6px;
+}
+
+.company-info-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.info-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-weight: 600;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.info-value {
+    color: #1e293b;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.info-value a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+.info-value a:hover {
+    text-decoration: underline;
+}
+
+.copy-btn {
+    background: none;
+    border: none;
+    color: #6b7280;
+    padding: 4px;
+    margin-left: 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.copy-btn:hover {
+    background: #f3f4f6;
+    color: #3b82f6;
+}
+
+/* Quick Actions Card */
+.quick-actions-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+    height: fit-content;
+}
+
+.quick-actions-card h5 {
+    color: #1e293b;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.action-buttons {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px 20px;
+    color: #475569;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.action-btn:hover {
+    background: #e2e8f0;
+    border-color: #3b82f6;
+    color: #3b82f6;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
+}
+
+.action-btn i {
+    margin-right: 12px;
+    font-size: 18px;
+}
+
+.trust-indicators {
+    padding-top: 25px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.trust-item i {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+/* Banking Section */
+.banking-section {
+    padding: 80px 0;
+}
+
+.banking-card,
+.tax-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+    height: 100%;
+}
+
+.banking-header,
+.tax-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.banking-header h4,
+.tax-header h4 {
+    color: #1e293b;
+    margin: 0;
+    font-weight: 600;
+}
+
+.tax-status {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #10b981;
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.status-indicator.good {
+    background: #10b981;
+    animation: pulse 2s infinite;
+}
+
+.bank-details,
+.tax-details {
+    display: grid;
+    gap: 16px;
+}
+
+.bank-row,
+.tax-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.bank-row:last-child,
+.tax-row:last-child {
+    border-bottom: none;
+}
+
+.bank-label,
+.tax-label {
+    font-weight: 600;
+    color: #64748b;
+    font-size: 14px;
+    min-width: 120px;
+}
+
+.bank-value,
+.tax-value {
+    color: #1e293b;
+    font-weight: 500;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+/* Documents Section */
+.documents-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.document-categories {
+    display: grid;
+    gap: 40px;
+}
+
+.category-block {
+    background: #f8fafc;
+    border-radius: 20px;
+    padding: 30px;
+    border: 2px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.category-block:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 10px 40px rgba(59, 130, 246, 0.1);
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.category-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.category-title i {
+    font-size: 24px;
+}
+
+.category-title h3 {
+    color: #1e293b;
+    margin: 0;
+    font-weight: 600;
+}
+
+.category-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.document-count {
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.category-description {
+    color: #64748b;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.documents-list {
+    display: grid;
+    gap: 20px;
+}
+
+.document-item {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+.document-item:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.1);
+    transform: translateY(-2px);
+}
+
+.doc-icon {
+    width: 60px;
+    height: 60px;
+    background: #fef2f2;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.doc-content {
+    flex: 1;
+}
+
+.doc-title {
+    color: #1e293b;
+    margin: 0 0 8px 0;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.doc-description {
+    color: #64748b;
+    margin: 0 0 12px 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.doc-meta {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.doc-size,
+.doc-date {
+    display: flex;
+    align-items: center;
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.doc-size i,
+.doc-date i {
+    margin-right: 5px;
+}
+
+.doc-actions {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+/* Document Viewer Modal */
+.modal-xl .modal-content {
+    height: 90vh;
+}
+
+.modal-tools {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 20px;
+}
+
+.zoom-indicator {
+    min-width: 50px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.document-viewer {
+    height: 100%;
+    position: relative;
+}
+
+#documentFrame {
+    width: 100%;
+    height: 70vh;
+    min-height: 500px;
+}
+
+/* Verification Section */
+.verification-section {
+    padding: 60px 0;
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.1);
+    }
+}
+
+/* Copy Success Animation */
+.copy-success {
+    animation: copyPulse 0.3s ease;
+}
+
+@keyframes copyPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Loading States */
+.document-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    color: #64748b;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #e2e8f0;
+    border-top: 3px solid #3b82f6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 15px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .legal-hero {
+        padding: 80px 0 60px;
+        min-height: 60vh;
+    }
+    
+    .company-status {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .status-item {
+        padding: 15px;
+    }
+    
+    .stat-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .info-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        text-align: left;
+    }
+    
+    .info-label {
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
+    
+    .bank-row,
+    .tax-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .bank-value,
+    .tax-value {
+        justify-content: flex-start;
+        width: 100%;
+    }
+    
+    .category-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .document-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .doc-meta {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .doc-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .modal-tools {
+        flex-wrap: wrap;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .legal-hero,
+    .company-details-section,
+    .banking-section,
+    .documents-section {
+        padding: 60px 0;
+    }
+    
+    .company-card,
+    .banking-card,
+    .tax-card,
+    .quick-actions-card {
+        padding: 25px;
+    }
+    
+    .legal-dashboard {
+        padding: 25px;
+    }
+    
+    .category-block {
+        padding: 25px;
+    }
+    
+    .document-item {
+        padding: 20px;
+    }
+    
+    .stat-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .company-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .company-logo {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .legal-hero,
+    .doc-actions,
+    .category-actions,
+    .quick-actions-card,
+    .verification-section {
+        display: none !important;
+    }
+    
+    .document-item {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    .company-card,
+    .banking-card,
+    .tax-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
