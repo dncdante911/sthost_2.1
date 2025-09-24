@@ -1,0 +1,21 @@
+[2025-08-12 04:31:23] [ERROR] Main database connection failed: SQLSTATE[HY000] [1045] Access denied for user 'sthostdb'@'localhost' (using password: YES)
+[2025-08-12 04:31:23] [INFO] FossBilling database connected successfully
+[2025-08-12 04:31:23] [INFO] Database initialization completed successfully
+[2025-08-12 05:11:26] [ERROR] Main database connection failed: SQLSTATE[HY000] [1045] Access denied for user 'sthostdb'@'localhost' (using password: YES)
+[2025-08-12 05:11:26] [INFO] FossBilling database connected successfully
+[2025-08-12 05:11:26] [INFO] Database initialization completed successfully
+[2025-08-12 07:51:37] [ERROR] Main database connection failed: SQLSTATE[HY000] [1045] Access denied for user 'sthostdb'@'localhost' (using password: YES)
+[2025-08-12 07:51:37] [INFO] FossBilling database connected successfully
+[2025-08-12 07:51:37] [INFO] Database initialization completed successfully
+[2025-08-12 11:38:53] [ERROR] Main database connection failed: SQLSTATE[HY000] [1045] Access denied for user 'sthostdb'@'localhost' (using password: YES)
+[2025-08-12 11:38:53] [INFO] FossBilling database connected successfully
+[2025-08-12 11:38:53] [INFO] Database initialization completed successfully
+[2025-08-12 12:38:39] [ERROR] Main database connection failed: SQLSTATE[HY000] [1045] Access denied for user 'sthostdb'@'localhost' (using password: YES)
+[2025-08-12 12:38:39] [INFO] FossBilling database connected successfully
+[2025-08-12 12:38:39] [INFO] Database initialization completed successfully
+[2025-08-12 20:56:15] [ERROR] Main database connection failed: SQLSTATE[HY000] [1045] Access denied for user 'sthostdb'@'localhost' (using password: YES)
+[2025-08-12 20:56:15] [INFO] FossBilling database connected successfully
+[2025-08-12 20:56:15] [INFO] Database initialization completed successfully
+[2025-08-12 20:56:15] [ERROR] Main database connection failed: SQLSTATE[HY000] [1045] Access denied for user 'sthostdb'@'localhost' (using password: YES)
+[2025-08-12 20:56:15] [INFO] FossBilling database connected successfully
+[2025-08-12 20:56:15] [INFO] Database initialization completed successfully

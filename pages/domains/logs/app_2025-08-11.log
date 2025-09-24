@@ -1,0 +1,63 @@
+[2025-08-11 00:20:57] [ERROR] Main database connection failed: SQLSTATE[HY000] [1045] Access denied for user 'sthostdb'@'localhost' (using password: YES)
+[2025-08-11 00:20:57] [INFO] FossBilling database connected successfully
+[2025-08-11 00:20:57] [INFO] Database initialization completed successfully
+[2025-08-11 00:31:12] [ERROR] Main database connection failed: SQLSTATE[HY000] [1045] Access denied for user 'sthostdb'@'localhost' (using password: YES)
+[2025-08-11 00:31:12] [INFO] FossBilling database connected successfully
+[2025-08-11 00:31:12] [INFO] Database initialization completed successfully
+[2025-08-11 00:41:41] [ERROR] Main database connection failed: SQLSTATE[HY000] [1045] Access denied for user 'sthostdb'@'localhost' (using password: YES)
+[2025-08-11 00:41:41] [INFO] FossBilling database connected successfully
+[2025-08-11 00:41:41] [INFO] Database initialization completed successfully
+[2025-08-11 00:52:52] [ERROR] Main database connection failed: SQLSTATE[HY000] [1045] Access denied for user 'sthostdb'@'localhost' (using password: YES)
+[2025-08-11 00:52:52] [INFO] FossBilling database connected successfully
+[2025-08-11 00:52:52] [INFO] Database initialization completed successfully
+[2025-08-11 01:02:50] [ERROR] Main database connection failed: SQLSTATE[HY000] [1045] Access denied for user 'sthostdb'@'localhost' (using password: YES)
+[2025-08-11 01:02:50] [INFO] FossBilling database connected successfully
+[2025-08-11 01:02:50] [INFO] Database initialization completed successfully
+[2025-08-11 01:13:56] [ERROR] Main database connection failed: SQLSTATE[HY000] [1045] Access denied for user 'sthostdb'@'localhost' (using password: YES)
+[2025-08-11 01:13:56] [INFO] FossBilling database connected successfully
+[2025-08-11 01:13:56] [INFO] Database initialization completed successfully
+[2025-08-11 04:18:51] [ERROR] Main database connection failed: SQLSTATE[HY000] [1045] Access denied for user 'sthostdb'@'localhost' (using password: YES)
+[2025-08-11 04:18:51] [INFO] FossBilling database connected successfully
+[2025-08-11 04:18:51] [INFO] Database initialization completed successfully
+[2025-08-11 06:24:31] [ERROR] Main database connection failed: SQLSTATE[HY000] [1045] Access denied for user 'sthostdb'@'localhost' (using password: YES)
+[2025-08-11 06:24:31] [INFO] FossBilling database connected successfully
+[2025-08-11 06:24:31] [INFO] Database initialization completed successfully
+[2025-08-11 07:25:19] [ERROR] Main database connection failed: SQLSTATE[HY000] [1045] Access denied for user 'sthostdb'@'localhost' (using password: YES)
+[2025-08-11 07:25:19] [INFO] FossBilling database connected successfully
+[2025-08-11 07:25:19] [INFO] Database initialization completed successfully
+[2025-08-11 08:16:00] [ERROR] Main database connection failed: SQLSTATE[HY000] [1045] Access denied for user 'sthostdb'@'localhost' (using password: YES)
+[2025-08-11 08:16:00] [INFO] FossBilling database connected successfully
+[2025-08-11 08:16:00] [INFO] Database initialization completed successfully
+[2025-08-11 08:16:18] [ERROR] Main database connection failed: SQLSTATE[HY000] [1045] Access denied for user 'sthostdb'@'localhost' (using password: YES)
+[2025-08-11 08:16:18] [INFO] FossBilling database connected successfully
+[2025-08-11 08:16:18] [INFO] Database initialization completed successfully
+[2025-08-11 08:16:39] [ERROR] Main database connection failed: SQLSTATE[HY000] [1045] Access denied for user 'sthostdb'@'localhost' (using password: YES)
+[2025-08-11 08:16:39] [INFO] FossBilling database connected successfully
+[2025-08-11 08:16:39] [INFO] Database initialization completed successfully
+[2025-08-11 08:19:49] [ERROR] Main database connection failed: SQLSTATE[HY000] [1045] Access denied for user 'sthostdb'@'localhost' (using password: YES)
+[2025-08-11 08:19:49] [INFO] FossBilling database connected successfully
+[2025-08-11 08:19:49] [INFO] Database initialization completed successfully
+[2025-08-11 08:20:09] [ERROR] Main database connection failed: SQLSTATE[HY000] [1045] Access denied for user 'sthostdb'@'localhost' (using password: YES)
+[2025-08-11 08:20:09] [INFO] FossBilling database connected successfully
+[2025-08-11 08:20:09] [INFO] Database initialization completed successfully
+[2025-08-11 10:16:04] [ERROR] Main database connection failed: SQLSTATE[HY000] [1045] Access denied for user 'sthostdb'@'localhost' (using password: YES)
+[2025-08-11 10:16:04] [INFO] FossBilling database connected successfully
+[2025-08-11 10:16:04] [INFO] Database initialization completed successfully
+[2025-08-11 21:47:05] [ERROR] Main database connection failed: SQLSTATE[HY000] [1045] Access denied for user 'sthostdb'@'localhost' (using password: YES)
+[2025-08-11 21:47:05] [INFO] FossBilling database connected successfully
+[2025-08-11 21:47:05] [INFO] Database initialization completed successfully
+[2025-08-11 21:52:23] [ERROR] Main database connection failed: SQLSTATE[HY000] [1045] Access denied for user 'sthostdb'@'localhost' (using password: YES)
+[2025-08-11 21:52:23] [INFO] FossBilling database connected successfully
+[2025-08-11 21:52:23] [INFO] Database initialization completed successfully
+[2025-08-11 22:47:58] [ERROR] Main database connection failed: SQLSTATE[HY000] [1045] Access denied for user 'sthostdb'@'localhost' (using password: YES)
+[2025-08-11 22:47:58] [INFO] FossBilling database connected successfully
+[2025-08-11 22:47:58] [INFO] Database initialization completed successfully
+[2025-08-11 23:02:21] [ERROR] Main database connection failed: SQLSTATE[HY000] [1045] Access denied for user 'sthostdb'@'localhost' (using password: YES)
+[2025-08-11 23:02:21] [INFO] FossBilling database connected successfully
+[2025-08-11 23:02:21] [INFO] Database initialization completed successfully
+[2025-08-11 23:14:41] [ERROR] Main database connection failed: SQLSTATE[HY000] [1045] Access denied for user 'sthostdb'@'localhost' (using password: YES)
+[2025-08-11 23:14:41] [INFO] FossBilling database connected successfully
+[2025-08-11 23:14:41] [INFO] Database initialization completed successfully
+[2025-08-11 23:51:10] [ERROR] Main database connection failed: SQLSTATE[HY000] [1045] Access denied for user 'sthostdb'@'localhost' (using password: YES)
+[2025-08-11 23:51:10] [INFO] FossBilling database connected successfully
+[2025-08-11 23:51:10] [INFO] Database initialization completed successfully
