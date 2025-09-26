@@ -1,0 +1,1339 @@
+/* ============================================
+   CSS ПЕРЕМЕННЫЕ - Основные значения
+============================================ */
+:root {
+    /* Цветовая схема */
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    --warning-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --info-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --vps-gradient: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    
+    /* Эффекты и тени */
+    --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    --card-hover-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    --border-radius: 20px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Цвета текста */
+    --text-primary: #2c3e50;
+    --text-secondary: #7f8c8d;
+    --text-muted: #95a5a6;
+    --background-light: #f8f9fa;
+    --background-lighter: #ffffff;
+}
+
+/* ============================================
+   ОСНОВНЫЕ СТИЛИ
+============================================ */
+.main-content.client-dashboard {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding: 30px 0 60px;
+}
+
+/* ============================================
+   WELCOME SECTION - Приветственный блок
+============================================ */
+.welcome-section {
+    background: var(--primary-gradient);
+    border-radius: var(--border-radius);
+    padding: 50px;
+    margin-bottom: 40px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+.welcome-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(255,255,255,0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.welcome-content {
+    position: relative;
+    z-index: 2;
+}
+
+.welcome-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.welcome-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.welcome-title .text-highlight {
+    color: #ffd700;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.welcome-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 30px;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.welcome-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.info-item i {
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   WELCOME ILLUSTRATION - Анимированная иллюстрация
+============================================ */
+.welcome-illustration {
+    position: relative;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.floating-card {
+    position: relative;
+    width: 180px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: float 3s ease-in-out infinite;
+}
+
+.card-glow {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+    border-radius: 30px;
+    filter: blur(20px);
+    opacity: 0.3;
+    animation: rotate 4s linear infinite;
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.card-content i {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.floating-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.element {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.element-1 {
+    top: 20px;
+    right: 50px;
+    animation: float 3s ease-in-out infinite reverse;
+}
+
+.element-2 {
+    bottom: 60px;
+    left: 30px;
+    animation: float 3s ease-in-out 1s infinite;
+}
+
+.element-3 {
+    top: 120px;
+    right: 20px;
+    animation: float 3s ease-in-out 2s infinite reverse;
+}
+
+/* ============================================
+   STATISTICS SECTION - Статистические карточки
+============================================ */
+.statistics-section {
+    margin-bottom: 40px;
+}
+
+.stats-card {
+    background: var(--background-lighter);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    border: 2px solid transparent;
+}
+
+.stats-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--primary-gradient);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.stats-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--card-hover-shadow);
+    border-color: rgba(102, 126, 234, 0.2);
+}
+
+.stats-card:hover::before {
+    opacity: 1;
+}
+
+.stats-card-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.stats-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: white;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.domains-icon { background: linear-gradient(135deg, #667eea, #764ba2); }
+.hosting-icon { background: linear-gradient(135deg, #f093fb, #f5576c); }
+.vps-icon { background: var(--vps-gradient); }
+.active-icon { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+
+.stats-content {
+    flex: 1;
+}
+
+.stats-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.stats-label {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.stats-trend {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: #27ae60;
+    font-weight: 500;
+}
+
+.vps-trend {
+    color: #28a745 !important;
+}
+
+.stats-progress {
+    width: 100%;
+    height: 6px;
+    background: #ecf0f1;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 3px;
+    transition: var(--transition);
+}
+
+.domains-progress { background: linear-gradient(90deg, #667eea, #764ba2); }
+.hosting-progress { background: linear-gradient(90deg, #f093fb, #f5576c); }
+.vps-progress { background: var(--vps-gradient); }
+.active-progress { background: linear-gradient(90deg, #4facfe, #00f2fe); }
+
+/* ============================================
+   VPS CARD SPECIAL EFFECTS - Специальные эффекты для VPS
+============================================ */
+.vps-stats-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fff9 100%);
+    border: 2px solid #e8f5e8;
+}
+
+.vps-stats-card:hover {
+    border-color: #28a745;
+}
+
+.new-feature-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: linear-gradient(135deg, #ff6b6b, #feca57);
+    color: white;
+    font-size: 10px;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-weight: 700;
+    animation: pulse 2s infinite;
+    z-index: 10;
+}
+
+.vps-sparkle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #ffd700, #ffed4e);
+    border-radius: 50%;
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+/* ============================================
+   QUICK ACTIONS SECTION - Секция быстрых действий
+============================================ */
+.quick-actions-section {
+    margin-bottom: 40px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.quick-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.action-card {
+    background: var(--background-lighter);
+    border-radius: var(--border-radius);
+    padding: 35px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.action-card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.domains-card .action-card-bg { background: linear-gradient(135deg, #667eea, #764ba2); }
+.hosting-card .action-card-bg { background: linear-gradient(135deg, #f093fb, #f5576c); }
+.vps-card .action-card-bg { background: var(--vps-gradient); }
+.profile-card .action-card-bg { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+
+.action-card:hover {
+    transform: translateY(-15px);
+    box-shadow: var(--card-hover-shadow);
+    color: white;
+    text-decoration: none;
+}
+
+.action-card:hover .action-card-bg {
+    opacity: 1;
+}
+
+.action-card-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex: 1;
+}
+
+.action-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    color: #495057;
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.action-card:hover .action-icon {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transform: scale(1.1);
+}
+
+.action-info {
+    flex: 1;
+}
+
+.action-info h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.action-info p {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+.action-features {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.action-features span {
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+.vps-features span {
+    font-weight: 500;
+}
+
+.action-arrow {
+    font-size: 1.5rem;
+    opacity: 0.6;
+    transition: var(--transition);
+}
+
+.action-card:hover .action-arrow {
+    opacity: 1;
+    transform: translateX(10px);
+}
+
+/* ============================================
+   VPS FEATURED CARD - Специальная VPS карточка
+============================================ */
+.featured-card {
+    position: relative;
+    border: 2px solid #28a745;
+    background: linear-gradient(135deg, #ffffff 0%, #f0fff4 100%);
+}
+
+.featured-glow {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: var(--vps-gradient);
+    border-radius: var(--border-radius);
+    filter: blur(8px);
+    opacity: 0.3;
+    z-index: -1;
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+.vps-action-icon {
+    background: var(--vps-gradient) !important;
+    color: white !important;
+    position: relative;
+}
+
+.pulse-ring {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 3px solid #28a745;
+    border-radius: 50%;
+    animation: pulse-ring 2s ease-out infinite;
+}
+
+.new-badge {
+    background: linear-gradient(135deg, #ff6b6b, #feca57);
+    color: white;
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-weight: 700;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.sparkles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.sparkle {
+    position: absolute;
+    font-size: 1.2rem;
+    animation: sparkle-move 3s ease-in-out infinite;
+}
+
+.sparkle-1 {
+    top: 20px;
+    right: 30px;
+    animation-delay: 0s;
+}
+
+.sparkle-2 {
+    bottom: 30px;
+    left: 40px;
+    animation-delay: 1s;
+}
+
+.sparkle-3 {
+    top: 50%;
+    right: 20px;
+    animation-delay: 2s;
+}
+
+/* ============================================
+   CONTENT CARDS - Контентные карточки
+============================================ */
+.content-card {
+    background: var(--background-lighter);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    transition: var(--transition);
+    margin-bottom: 30px;
+}
+
+.content-card:hover {
+    box-shadow: var(--card-hover-shadow);
+}
+
+.card-header {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 25px 30px;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+}
+
+.header-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-gradient);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.vps-header-icon {
+    background: var(--vps-gradient) !important;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.card-subtitle {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.header-actions .btn-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid #dee2e6;
+    color: #6c757d;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-icon:hover {
+    background: var(--primary-gradient);
+    color: white;
+    border-color: transparent;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.card-footer {
+    background: var(--background-light);
+    padding: 20px 30px;
+    border-top: 1px solid #dee2e6;
+    text-align: center;
+}
+
+/* ============================================
+   VPS ACTIVITY CARD - Специальная VPS активность
+============================================ */
+.vps-activity-section {
+    margin-bottom: 40px;
+}
+
+.vps-activity-card {
+    border: 2px solid #28a745;
+    background: linear-gradient(135deg, #ffffff 0%, #f0fff4 100%);
+}
+
+/* ============================================
+   ACCOUNT SECTION - Секция аккаунта
+============================================ */
+.account-section {
+    margin-bottom: 40px;
+}
+
+.account-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.info-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 25px;
+    background: var(--background-light);
+    border-radius: 15px;
+    transition: var(--transition);
+}
+
+.info-group:hover {
+    background: #e9ecef;
+    transform: translateY(-3px);
+}
+
+.info-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-gradient);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: white;
+    flex-shrink: 0;
+}
+
+.info-content {
+    flex: 1;
+}
+
+.info-content label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.info-content value {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.verification-status {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 8px;
+    font-size: 0.85rem;
+}
+
+.verification-status.verified {
+    color: #28a745;
+}
+
+/* ============================================
+   EMPTY STATES - Пустые состояния
+============================================ */
+.empty-state {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.empty-illustration {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #adb5bd;
+    margin: 0 auto 25px;
+}
+
+.vps-empty-icon {
+    background: var(--vps-gradient) !important;
+    color: white !important;
+}
+
+.empty-state h4 {
+    color: #495057;
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    color: #6c757d;
+    margin-bottom: 25px;
+}
+
+.balance-info {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.balance-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.balance-value {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #155724;
+}
+
+/* ============================================
+   LISTS - Списки элементов
+============================================ */
+.orders-list, .invoices-list, .vps-operations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.order-item, .invoice-item, .operation-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: var(--background-light);
+    border-radius: 15px;
+    transition: var(--transition);
+}
+
+.order-item:hover, .invoice-item:hover, .operation-item:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+}
+
+.order-icon, .invoice-icon, .operation-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-gradient);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: white;
+    flex-shrink: 0;
+}
+
+.operation-icon.status-completed {
+    background: var(--success-gradient);
+}
+
+.operation-icon.status-failed {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.operation-icon.status-running {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.order-info, .invoice-info, .operation-info {
+    flex: 1;
+}
+
+.order-title, .invoice-title, .operation-title {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.order-service, .invoice-amount, .operation-target {
+    color: var(--text-secondary);
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.order-date, .invoice-date, .operation-time {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.order-status, .invoice-status, .operation-status {
+    flex-shrink: 0;
+}
+
+.status-badge {
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    letter-spacing: 0.5px;
+}
+
+.status-active, .status-completed { 
+    background: #d4edda; 
+    color: #155724; 
+}
+
+.status-pending, .status-running { 
+    background: #fff3cd; 
+    color: #856404; 
+}
+
+.status-suspended, .status-failed { 
+    background: #f8d7da; 
+    color: #721c24; 
+}
+
+.status-paid { 
+    background: #d1ecf1; 
+    color: #0c5460; 
+}
+
+.status-overdue { 
+    background: #f8d7da; 
+    color: #721c24; 
+}
+
+/* ============================================
+   BUTTONS - Кнопки
+============================================ */
+.btn {
+    border-radius: 12px;
+    font-weight: 600;
+    transition: var(--transition);
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--primary-gradient);
+    color: white;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+    color: white;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #e9ecef;
+    color: #495057;
+}
+
+.btn-outline:hover {
+    background: var(--primary-gradient);
+    border-color: transparent;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+}
+
+.empty-actions {
+    margin-top: 20px;
+}
+
+/* ============================================
+   ANIMATIONS - Анимации
+============================================ */
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0px); 
+    }
+    50% { 
+        transform: translateY(-15px); 
+    }
+}
+
+@keyframes rotate {
+    0% { 
+        transform: rotate(0deg); 
+    }
+    100% { 
+        transform: rotate(360deg); 
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        transform: scale(1); 
+    }
+    50% { 
+        transform: scale(1.05); 
+    }
+}
+
+@keyframes pulse-ring {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 53%, 80%, 100% {
+        transform: translate3d(0,0,0);
+    }
+    40%, 43% {
+        transform: translate3d(0, -8px, 0);
+    }
+    70% {
+        transform: translate3d(0, -4px, 0);
+    }
+    90% {
+        transform: translate3d(0, -2px, 0);
+    }
+}
+
+@keyframes sparkle {
+    0%, 100% { 
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+    50% { 
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes sparkle-move {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateY(-10px) rotate(180deg);
+        opacity: 1;
+    }
+}
+
+@keyframes glow {
+    0% { 
+        opacity: 0.3; 
+    }
+    100% { 
+        opacity: 0.6; 
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Адаптивная верстка
+============================================ */
+@media (max-width: 1199px) {
+    .welcome-title {
+        font-size: 2.5rem;
+    }
+    
+    .quick-actions-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .stats-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.6rem;
+    }
+    
+    .stats-number {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .welcome-section {
+        padding: 40px 30px;
+    }
+    
+    .welcome-title {
+        font-size: 2.2rem;
+    }
+    
+    .welcome-info {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .floating-card {
+        width: 150px;
+        height: 100px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .account-info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-card-inner {
+        gap: 15px;
+    }
+    
+    .action-card-content {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .main-content.client-dashboard {
+        padding: 20px 0 40px;
+    }
+    
+    .welcome-section {
+        padding: 30px 20px;
+    }
+    
+    .welcome-title {
+        font-size: 1.8rem;
+    }
+    
+    .welcome-subtitle {
+        font-size: 1rem;
+    }
+    
+    .stats-card {
+        padding: 20px;
+    }
+    
+    .stats-number {
+        font-size: 2rem;
+    }
+    
+    .action-card {
+        padding: 25px;
+    }
+    
+    .action-card-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .action-info {
+        text-align: center;
+    }
+    
+    .card-header {
+        padding: 20px;
+    }
+    
+    .card-body {
+        padding: 20px;
+    }
+    
+    .info-group {
+        padding: 20px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .floating-elements {
+        display: none;
+    }
+    
+    .welcome-info {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .welcome-section {
+        padding: 25px 15px;
+    }
+    
+    .stats-card-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .quick-actions-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .order-item, .invoice-item, .operation-item {
+        padding: 15px;
+        gap: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .order-icon, .invoice-icon, .operation-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .card-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .header-actions {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .action-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY - Доступность
+============================================ */
+.action-card:focus,
+.btn:focus,
+.btn-icon:focus {
+    outline: 3px solid rgba(102, 126, 234, 0.3);
+    outline-offset: 2px;
+}
+
+/* ============================================
+   SELECTION - Выделение текста
+============================================ */
+::selection {
+    background: rgba(102, 126, 234, 0.2);
+    color: var(--text-primary);
+}
+
+/* ============================================
+   SCROLLBARS - Полосы прокрутки
+============================================ */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-gradient);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #5a6fd8, #6a4190);
+}
+
+/* ============================================
+   UTILITY CLASSES - Вспомогательные классы
+============================================ */
+.text-gradient {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.shadow-hover {
+    transition: var(--transition);
+}
+
+.shadow-hover:hover {
+    box-shadow: var(--card-hover-shadow);
+}
+
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS - Оптимизации
+============================================ */
+.stats-card,
+.action-card,
+.content-card {
+    will-change: transform;
+}
+
+.floating-card,
+.element {
+    will-change: transform;
+}
+
+/* Уменьшаем анимации для пользователей с предпочтением reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
