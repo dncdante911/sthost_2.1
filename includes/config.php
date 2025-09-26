@@ -83,15 +83,24 @@ define('ISPMANAGER_URL', 'https://cp.sthost.pro');
 define('ISPMANAGER_USER', 'root');
 define('ISPMANAGER_PASS', '0607Dm$157');
 
+// Libvirt настройки
+define('LIBVIRT_HOST', '192.168.0.4');
+define('LIBVIRT_USER', 'dncdante');
+define('LIBVIRT_URI', 'qemu+ssh://dncdante@localhost/system');
+
+// VPS настройки
+define('VPS_TEMPLATES_PATH', '/var/lib/libvirt/images/templates/');
+define('VPS_IMAGES_PATH', '/var/lib/libvirt/images/');
+
 // FOSSBilling настройки
 define('FOSSBILLING_URL', 'https://bill.sthost.pro');
-define('FOSSBILLING_API_TOKEN', 'YOUR_FOSSBILLING_API_TOKEN');
+define('FOSSBILLING_API_TOKEN', 'GTfbsKnkaVE7MV1PE7XjfekQx1ixleF1');
 
 // Настройки почты
-define('SMTP_HOST', 'smtp.gmail.com');
+define('SMTP_HOST', 'mail.sthost.pro');
 define('SMTP_PORT', 587);
-define('SMTP_USERNAME', 'your-email@gmail.com');
-define('SMTP_PASSWORD', 'your-app-password');
+define('SMTP_USERNAME', 'support@sthost.pro');
+define('SMTP_PASSWORD', '0607Dm$157');
 
 // Настройки капчи
 define('RECAPTCHA_SITE_KEY', 'YOUR_RECAPTCHA_SITE_KEY');
